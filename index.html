@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MooBake🍰 — homemade cakes, cupcakes, cookies, cheesecakes and brownies. Delivery and pickup in Gothenburg.">
+  <title>MooBake🍰 | Baked with love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="MooBake home">MooBake<span>🍰</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#delivery">Delivery & Pickup</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <button class="cart-button" id="openCart">Cart <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">FRESH • HOMEMADE • SWEET</p>
+        <h1>Baked with love,<br><em>made for you.</em></h1>
+        <p>Freshly baked treats made with care — delivered to you or available for pickup in Gothenburg.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#menu">Shop now</a>
+          <a class="btn secondary" href="#custom">Custom cake</a>
+        </div>
+      </div>
+      <div class="hero-art reveal" aria-label="Decorative bakery illustration">
+        <div class="cake-illustration">
+          <div class="cake-top">🍓</div>
+          <div class="cake-body"></div>
+          <div class="cake-plate"></div>
+          <span>Made fresh</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="section-heading reveal">
+        <p class="eyebrow">THE MENU</p>
+        <h2>Our sweet selection</h2>
+        <p>Choose a treat, add it to your cart, and send your order request when you're ready.</p>
+      </div>
+      <div class="category-tabs" id="categoryTabs" aria-label="Product categories"></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="feature-strip">
+      <div><strong>🍰 Freshly baked</strong><span>Made with care.</span></div>
+      <div><strong>💗 Made with love</strong><span>Every order matters.</span></div>
+      <div><strong>🚚 Delivery</strong><span>Ask us about your area.</span></div>
+      <div><strong>📍 Gothenburg pickup</strong><span>Local pickup available.</span></div>
+    </section>
+
+    <section class="section split-section" id="about">
+      <div class="about-art reveal"><span>🧁</span><span>🍪</span><span>🍓</span></div>
+      <div class="reveal">
+        <p class="eyebrow">ABOUT MOОBAKE</p>
+        <h2>Small-batch treats, big on comfort.</h2>
+        <p>MooBake🍰 is a homemade baking brand focused on delicious cakes, cupcakes, cookies, cheesecakes and brownies. This section is ready for your own story — add how you started, what inspires you, and what makes your baking special.</p>
+        <p class="muted">Replace this text with your real business story before publishing.</p>
+      </div>
+    </section>
+
+    <section class="section custom-section" id="custom">
+      <div class="section-heading reveal">
+        <p class="eyebrow">MAKE IT YOURS</p>
+        <h2>Custom cakes for special moments</h2>
+        <p>Tell MooBake what you're imagining. A request is not a confirmed order until you receive confirmation from the bakery.</p>
+      </div>
+      <form class="custom-form card reveal" id="customForm">
+        <div class="form-grid">
+          <label>Full name<input name="name" required></label>
+          <label>Email<input name="email" type="email" required></label>
+          <label>Phone<input name="phone" type="tel" required></label>
+          <label>Preferred date<input name="date" type="date" required></label>
+          <label>Number of servings<input name="servings" type="number" min="1" placeholder="e.g. 12"></label>
+          <label>Flavor<input name="flavor" placeholder="e.g. chocolate"></label>
+          <label>Theme / colors<input name="theme" placeholder="e.g. pink floral"></label>
+          <label>Writing on cake<input name="writing" placeholder="Optional"></label>
+        </div>
+        <label>Additional notes<textarea name="notes" rows="4" placeholder="Describe your idea, decoration, inspiration, allergies, etc."></textarea></label>
+        <button class="btn primary" type="submit">Send custom cake request</button>
+        <p class="form-note">No payment is taken by this website.</p>
+      </form>
+    </section>
+
+    <section class="section delivery-section" id="delivery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">ORDER OPTIONS</p>
+        <h2>Delivery or pickup?</h2>
+      </div>
+      <div class="delivery-grid">
+        <article class="info-card reveal"><div class="icon">🚚</div><h3>Delivery</h3><p>Delivery areas, fees and time slots can be configured in <code>script.js</code>. The site never invents a delivery price.</p><p><strong>Check availability at checkout.</strong></p></article>
+        <article class="info-card reveal"><div class="icon">📍</div><h3>Pickup in Gothenburg</h3><p><strong>Pickup is available only in Gothenburg, Sweden.</strong></p><p>The pickup address and hours are editable in <code>script.js</code> and are intentionally blank until you add the real details.</p></article>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="section-heading reveal">
+        <p class="eyebrow">QUESTIONS</p>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details><summary>Where do you deliver?</summary><p>Delivery zones are controlled by MooBake in the configuration. Ask the bakery if your address is covered.</p></details>
+        <details><summary>Can I pick up my order?</summary><p>Yes. Pickup is available only in Gothenburg, Sweden. The exact pickup address is provided by the bakery after the order is confirmed.</p></details>
+        <details><summary>How far in advance should I order?</summary><p>Preparation times are configurable by MooBake. Choose an available date at checkout and wait for confirmation.</p></details>
+        <details><summary>Can I customize a cake?</summary><p>Yes. Use the custom cake request form and describe what you want.</p></details>
+        <details><summary>What about allergens?</summary><p>Check each product's allergen information and tell MooBake about allergies in the order notes. Products may be prepared around common allergens.</p></details>
+        <details><summary>Do I pay online?</summary><p>No. This first version is an order-request website. It does not process card payments.</p></details>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading reveal">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Contact MooBake🍰</h2>
+        <p>Use the form for questions. Add your real email/social links in <code>script.js</code> before publishing.</p>
+      </div>
+      <form class="contact-form card reveal" id="contactForm">
+        <label>Name<input name="name" required></label>
+        <label>Email<input name="email" type="email" required></label>
+        <label>Message<textarea name="message" rows="5" required></textarea></label>
+        <button class="btn primary" type="submit">Prepare message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div><a class="logo" href="#home">MooBake<span>🍰</span></a><p>Baked with love, made for you.</p></div>
+    <div><strong>Quick links</strong><a href="#menu">Menu</a><a href="#delivery">Delivery & Pickup</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+    <div><strong>Pickup</strong><p>Gothenburg, Sweden only.</p><p class="muted">Add your pickup address in script.js.</p></div>
+    <div class="footer-bottom">© <span id="year"></span> MooBake🍰. All rights reserved.</div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-panel">
+      <div class="cart-header"><h2>Your cart</h2><button id="closeCart" class="icon-button" aria-label="Close cart">×</button></div>
+      <div id="cartItems"></div>
+      <div class="cart-summary">
+        <div><span>Subtotal</span><strong id="cartSubtotal">0 kr</strong></div>
+        <p class="muted">Delivery fee is calculated from the configured delivery rules and is not invented by the site.</p>
+        <button class="btn primary full" id="checkoutBtn">Continue to checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="icon-button modal-close" id="closeCheckout" aria-label="Close checkout">×</button>
+      <p class="eyebrow">ORDER REQUEST</p>
+      <h2>Almost there 🍰</h2>
+      <p class="muted">This website does not take online payment. Submitting this form creates an order request.</p>
+      <form id="checkoutForm">
+        <div class="form-grid">
+          <label>Full name<input name="name" required></label>
+          <label>Email<input name="email" type="email" required></label>
+          <label>Phone<input name="phone" type="tel" required></label>
+          <label>Preferred date<input name="date" type="date" required></label>
+          <label>Preferred time<input name="time" type="time" required></label>
+          <label>Order type<select name="method" id="orderMethod" required><option value="delivery">Delivery</option><option value="pickup">Pickup — Gothenburg only</option></select></label>
+        </div>
+        <div id="deliveryFields">
+          <label>Delivery address<input name="address" id="deliveryAddress" placeholder="Street, number, postal code, city"></label>
+        </div>
+        <div id="pickupFields" class="hidden">
+          <label class="checkbox"><input type="checkbox" id="gothenburgConfirm"> I confirm that pickup is in Gothenburg, Sweden.</label>
+          <p class="notice">Pickup is available only in Gothenburg, Sweden.</p>
+          <p id="pickupLocationText" class="muted"></p>
+        </div>
+        <label>Special instructions<textarea name="notes" rows="4" placeholder="Allergies, writing, delivery instructions, etc."></textarea></label>
+        <div class="order-preview" id="orderPreview"></div>
+        <button class="btn primary full" type="submit">Submit order request</button>
+        <p class="form-note">No card details are collected or processed.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
